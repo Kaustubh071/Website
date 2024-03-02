@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  <style>
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px;
+     }
+  
+     .row:after {
+       content: "";
+       display: table;
+       clear: both;
+     }
+    /* Add the provided CSS here */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .offer_head {
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .offer_btns {
+        color: yellow;
+        /* text-decoration: none;*/
+    }
+
+    .contact.us span {
+        float: right;
+        margin-right: 160px;
+    }
+
+    .contact.us {
+        background-color: rgb(42, 96, 211);
+        color: white;
+        padding: 14px;
+    }
+
+    .contact.us a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* third navbar */
+
+    .navbar {
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .navbar-logo {
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .navbar li {
+        float: right;
+    }
+
+    .navbar li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 47px 16px;
+        text-decoration: none;
+    }
+
+    .navbar li a:hover {
+        background-color: #ddd;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+        float: right;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn1 {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: white;
+        padding: 13px 16px;
+        min-height: min-content;
+        margin: 0;
+        padding-top: 37px;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: black;
+        background-color: white;
+        padding: 13px 16px;
+        min-height: min-content;
+        margin: 0;
+        padding-top: 37px;
+    }
+
+    .dropdown .dropbtn1 .abc1 {
+        background-color: rgb(55, 124, 244);
+        border: none;
+        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dropdown .dropbtn .abc {
+        background-color: white;
+        border: none;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 240px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* section 1 */
+    .bt_placement_baner {
+        background-color: rgb(55, 124, 244);
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    /* CSS for container-fluid */
+    .container-fluid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    /* CSS for bt_placement_banercontent */
+    .bt_placement_banercontent {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* CSS for bt_placement_banercontent h1 */
+    .bt_placement_banercontent h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    /* CSS for bt_placement_banercontent p */
+    .bt_placement_banercontent p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    /* CSS for bt_placementbtn1 and bt_placementbtn2 */
+    .bt_placementbtn1,
+    .bt_placementbtn2 {
+        display: inline-block;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(55, 124, 244);
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-right: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* CSS for bt_placementbtn1 hover */
+    .bt_placementbtn1:hover,
+    .bt_placementbtn2:hover {
+        background-color: orange;
+    }
+
+    /* section 2 */
+
+    .bt_placemnt_content {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    /* CSS for container-fluid */
+    .container-fluid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    /* CSS for img-fluid */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* CSS for bgg */
+    .bgg {
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: lightgreen;
+        color: #138b0a;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    /* CSS for bt_placemnt_right h2 */
+    .bt_placemnt_right h2 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* CSS for bt_placemnt_right p */
+    .bt_placemnt_right p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    /* CSS for bt_placemnt_right_btn */
+    .bt_placemnt_right_btn {
+        text-align: center;
+    }
+
+    /* CSS for bt_placemntbtn1 and bt_placemntbtn2 */
+    .bt_placemntbtn1,
+    .bt_placemntbtn2 {
+        display: inline-block;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        background-color: #007bff;
+        border-radius: 5px;
+        margin-right: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* CSS for bt_placemntbtn1 hover */
+    .bt_placemntbtn1:hover,
+    .bt_placemntbtn2:hover {
+        background-color: #0056b3;
+    }
+
+    /* CSS for modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1050;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        outline: 0;
+    }
+
+    /* CSS for modal-dialog */
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 10px;
+    }
+
+    /* CSS for modal-content */
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: .3rem;
+        outline: 0;
+    }
+
+    /* CSS for modal-body */
+    .modal-body {
+        flex: 1 1 auto;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    /* CSS for close button */
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5;
+        text-align: right;
+        padding: 1rem;
+        margin: -1rem -1rem -1rem auto;
+        background-color: transparent;
+        border: 0;
+    }
+
+    /* CSS for bt_placemnt_left and bt_placemnt_right */
+    .bt_placemnt_left,
+    .bt_placemnt_right {
+        text-align: left;
+    }
+
+    /* CSS for bt_placemnt_right_btn */
+    .bt_placemnt_right_btn {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .offer_head {
+            font-size: 17px;
+        }
+
+        .contact.us {
+            font-size: 16px;
+            padding-bottom: 33px;
+        }
+
+        .contact.us span {
+            font-size: 15px;
+        }
+    }
+</style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="offer_head">
+      Our Special Offer - Get 3 Courses at 24,999/- Only.
+      <a href="#" title="Read more" class="offer_btns">Read more</a>
+    </div>
+
+    <div class="contact us">
+        Nagpur:<a href="#"> +91-7744 822 228</a> 
+         ,<a href="#"> +91-7743 822 228</a> 
+                 <span>Talent(HR): <a href="#" >+91-9707 240 250</a> 
+                </span>    
+    </div>
+    
+    <div class="navbar">
+      <div class="navbar-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmtl3KfKFWYuqkWq9GKmBUc7xbEIBt6VJdB0YktdMKgA&s" alt="Company Logo" width="200px" height="70px">
+      </div>
+      <ul>
+        <li><a href="#home">Element 1</a></li>
+        <li><a href="#news">Element 2</a></li>
+        <li><a href="#abc">Element 3</a></li>
+        <li><a href="#def">Element 4</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">
+            <div class="abc">Dropdown 1
+            </div>
+            </button>
+          <div class="dropdown-content">
+            <a href="#">Dropdown Link 1</a>
+            <a href="#">Dropdown Link 2</a>
+            <a href="#">Dropdown Link 3</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn1">
+            <div class="abc1">
+            
+            Dropdown 2
+          </div>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Dropdown Link 4</a>
+            <a href="#">Dropdown Link 5</a>
+            <a href="#">Dropdown Link 6</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <section class="bt_placement_baner">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs">
+                  <div class="bt_placement_banercontent">
+                      <h1>Best Software Training Institute in Nagpur with 100% Placements</h1>
+                      <p>Asterisc is the No.1 Placement Training Institute in Bangalore and we are here to offer numerous placements for college students and there are many software courses assisting in 100% Placement. We promise in providing free placement support to all the certified fresher applicants. Any graduates can receive first-class IT career sessions and placement training at a reasonable charge.</p>
+                      <a href="https://www.besanttechnologies.com/placed-students-list" title="Placed Students List" class="bt_placementbtn1">Placed Students List</a>
+                      <a href="https://www.besanttechnologies.com/reviews-complaints-testimonials" title="Students Reviews" class="bt_placementbtn2">Students Reviews</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="bt_placemnt_content">
+    <div class="container-fluid">
+        <div class="row">
+          
+
+          <div class="column">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs">
+                <div class="bt_placemnt_left">
+                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKRHBZkoVGqENAyJTs1Iz0xvjGWuLwGCyEw&s" class="img-fluid" style="height: 300px;">
+                </div>
+            </div>
+          </div>
+          
+           <div class="column">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs">
+                <div class="bt_placemnt_right">
+                    <span class="bgg">Best Institute</span>
+                    <h2>Best Software Training Institute in Bangalore with 100% Placements</h2>
+                    <p>Software development courses make Besant Technologies to be an exclusive and best training center among various players in Bangalore. According to us, every student is special and unique. Few are placed in the first attempt of the interview, whereas the rest are more equipped and enabling them to shine in the next attempt. We arrange for unlimited interviews and never fail to support the individuals.</p>
+                    <div class="bt_placemnt_right_btn">
+                      <div class="bt_placemntbtn1">
+                        <a title="Know More" id="flip_place" href="#">Know More</a>
+                    </div>
+                    
+            <div class="bt_placemntbtn2">
+							<a href="#" title="Video Showcase" data-toggle="modal" data-target="#placementModal"><i class="fa fa-play"></i></a>
+							<span>Video Preview</span>
+						</div>
+
+             
+            
+          </div> 
+          
+                </div>
+                
+                
+                </div>
+            </div>
+           
+     
+
+        </div>
+        <div class="row"  >
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs">
+          
+          
+            
+                
+            <div id="panel_place" style="display: none;">
+              <p>At Besant Technologies, we all are aware of the importance of jobs for freshers and hence providing 100% placement assistance for freshers with plentiful courses to improve your skills. All our staff is well equipped, and we follow an actual and universal standard in the process of training students.</p>
+                <p>So, become a participant of ‘Besant Technologies- Placement Training Institute of Bangalore’ Family and collect a job leisurely. Our team is aware of the curriculum and our schedule program of every course is fine plotted with the IT employer requirements.</p>
+            
+            </div>
+        </div>
+      </div>
+        
+        
+       
+          
+    </div>
+    
+    
+</section>
+
+
+<script>
+
+  var flip_place = document.getElementById("flip_place");
+  var panel_place = document.getElementById("panel_place");
+  
+  // Add event listener to the "Know More" link
+  flip_place.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+  
+      // Toggle the visibility of the panel_place div
+      if (panel_place.style.display === "none") {
+          panel_place.style.display = "block";
+      } else {
+          panel_place.style.display = "none";
+      }
+  });
+
+</script>
+
+  </body>
+
+
+</html>
+
+
